@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>W3CValidator</name>
+    </assembly>
+    <members>
+        <member name="T:W3CValidator.IValidationProvider">
+            <summary>
+              <para>Representation of access point for different types of W3C content validators.</para>
+            </summary>
+        </member>
+        <member name="T:W3CValidator.IValidationRequest">
+            <summary>
+              <para>Represents a custom request for any W3C validation service.</para>
+            </summary>
+        </member>
+        <member name="P:W3CValidator.IValidationRequest.Parameters">
+            <summary>
+              <para>Map of parameters (names/values) for the request.</para>
+            </summary>
+        </member>
+        <member name="T:W3CValidator.ValidationException">
+            <summary>
+              <para>Base exception that indicates an error in the process of document's validation.</para>
+            </summary>
+        </member>
+        <member name="M:W3CValidator.ValidationException.#ctor(System.String,System.Exception)">
+            <summary>
+              <para>Initializes a new instance of the exception with a specified error message and a reference to the inner exception that is the cause of this exception.</para>
+            </summary>
+            <param name="message">The message that describes the error.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a <c>null</c> reference if no inner exception is specified.</param>
+            <exception cref="T:System.ArgumentNullException">If <paramref name="message"/> is a <c>null</c> reference.</exception>
+            <exception cref="T:System.ArgumentException">If <paramref name="message"/> is <see cref="F:System.String.Empty"/> string.</exception>
+        </member>
+        <member name="T:W3CValidator.ValidationRequest">
+            <summary>
+              <para>Abstract base implementation of <see cref="T:W3CValidator.IValidationRequest"/> contract.</para>
+            </summary>
+        </member>
+        <member name="P:W3CValidator.ValidationRequest.Parameters">
+            <summary>
+              <para>Map of parameters (names/values) for the request.</para>
+            </summary>
+        </member>
+        <member name="T:W3CValidator.Validator">
+            <summary>
+              <para>Entry point to access W3C validation services.</para>
+            </summary>
+        </member>
+        <member name="P:W3CValidator.Validator.Validate">
+            <summary>
+              <para>Returns validation provider instance to perform validating operations.</para>
+            </summary>
+        </member>
+    </members>
+</doc>

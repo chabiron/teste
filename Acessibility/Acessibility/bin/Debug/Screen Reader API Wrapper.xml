@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Screen Reader API Wrapper</name>
+    </assembly>
+    <members>
+        <member name="M:ScreenReaderAPIWrapper.ScreenReader.SayString(System.String)">
+            <summary>
+            Reads the given string, interrupting any currently speaking strings
+            </summary>
+            <param name="stringToSay">The text to be read aloud </param>
+        </member>
+        <member name="M:ScreenReaderAPIWrapper.ScreenReader.SayString(System.String,System.Boolean)">
+            <summary>
+            Reads the given string and optionally will interrupt any currently reading text
+            </summary>
+            <param name="stringToSay">The string to be read aloud</param>
+            <param name="isInterrupt">Whether to interrupt currently reading text</param>
+        </member>
+        <member name="M:ScreenReaderAPIWrapper.ScreenReader.SAPISayString(System.String)">
+            <summary>
+            Speaks the given message using SAPI, interrupting any currently reading SAPI speech
+            </summary>
+            <param name="stringToSay">The string to be read aloud</param>
+        </member>
+        <member name="M:ScreenReaderAPIWrapper.ScreenReader.SAPISayString(System.String,System.Boolean)">
+            <summary>
+            Reads the given message with SAPI, optionally interrupting currently reading SAPI speech
+            </summary>
+            <param name="stringToSay">The string to be read aloud</param>
+            <param name="isInterrupt">Whether to interrupt currently reading messages</param>
+        </member>
+        <member name="M:ScreenReaderAPIWrapper.ScreenReader.StopSpeech">
+            <summary>
+            Stops the screenreader speaking and returns true or false depending on success
+            </summary>
+        </member>
+        <member name="P:ScreenReaderAPIWrapper.ScreenReader.ScreenReaderNumber">
+            <summary>
+            Gets or sets the integer representation of the current screen reader
+            </summary>
+        </member>
+        <member name="P:ScreenReaderAPIWrapper.ScreenReader.ScreenReaderName">
+            <summary>
+            Gets or sets the name of the currently running screen reader
+            </summary>
+        </member>
+        <member name="P:ScreenReaderAPIWrapper.ScreenReader.SapiEnabled">
+            <summary>
+            Gets or sets whether Sapi will speak in the absense of a screenreader running
+            </summary>
+        </member>
+        <member name="P:ScreenReaderAPIWrapper.ScreenReader.SapiRate">
+            <summary>
+            Gets or sets the Sapi rate. 
+            </summary>
+            <remarks>Setting will be restricted to values between 0 and 100</remarks>
+        </member>
+    </members>
+</doc>
